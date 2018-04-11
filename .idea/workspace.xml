@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7510bb6d-23ae-4f39-86e3-f84803d3d4fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/dao/etudiant.dao.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/dao/publication.dao.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="etudiant.dao.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/dao/etudiant.dao.php">
+      <file leaf-file-name="publication.dao.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/dao/publication.dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state relative-caret-position="207">
+              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -43,6 +43,7 @@
         <option value="$PROJECT_DIR$/models/dao/connexiondb.class.php" />
         <option value="$PROJECT_DIR$/models/dao/commentaire.dao.php" />
         <option value="$PROJECT_DIR$/models/dao/etudiant.dao.php" />
+        <option value="$PROJECT_DIR$/models/dao/publication.dao.php" />
       </list>
     </option>
   </component>
@@ -126,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523476159808</updated>
-      <workItem from="1523476161190" duration="1744000" />
+      <workItem from="1523476161190" duration="1966000" />
     </task>
     <task id="LOCAL-00001" summary="class publication added">
       <created>1523476782045</created>
@@ -149,11 +150,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523477109872</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="class EtudiantDAO added">
+      <created>1523478003784</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1523478003785</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1744000" />
+    <option name="totallyTimeSpent" value="1966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -217,7 +225,8 @@
     <MESSAGE value="class publication added" />
     <MESSAGE value="class ConnexionDB added" />
     <MESSAGE value="class CommentaireDAO added" />
-    <option name="LAST_COMMIT_MESSAGE" value="class CommentaireDAO added" />
+    <MESSAGE value="class EtudiantDAO added" />
+    <option name="LAST_COMMIT_MESSAGE" value="class EtudiantDAO added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -262,6 +271,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dao/publication.dao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>
