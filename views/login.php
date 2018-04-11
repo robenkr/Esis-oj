@@ -37,15 +37,15 @@
                 <a class="navbar-brand" href="accueil.php"><img class="animated pulse infinite" src="static/img/esis.png" alt="logo"style="height:50px"> ESIS-OJ</a>
                 <!--Links-->
                 <div class="col-md-7 offset-md-3 car-block">
-                    <form action="">
+                    <form method="post" action="../controllers/new_connexion.php">
                         <div class="col-md-4">
                             <i class="fa fa-user prefix"></i>
-                            <input type="text" id="mymatricule" class="form-control">
+                            <input type="text" id="mymatricule" class="form-control" name="matricule">
                             <label for="mymatricule">Matricule</label>
                         </div>
                         <div class="col-md-4">
                             <i class="fa fa-user prefix"></i>
-                            <input type="password" id="mypwd" class="form-control">
+                            <input type="password" id="mypwd" class="form-control" name="pwd">
                             <label for="mypwd">Mot de passe</label>
                         </div>
                         <div class="col-md-4">
@@ -89,28 +89,35 @@
                                         <h3>Creer un compte:</h3>
                                         <hr>
                                     </div>
-
                                     <!--Body-->
-                                    <div class="md-form">
-                                        <i class="fa fa-user prefix"></i>
-                                        <input type="text" id="matricule" class="form-control">
-                                        <label for="matricule">Matricule</label>
-                                    </div>
-                                    <div class="md-form">
-                                        <i class="fa fa-key prefix"></i>
-                                        <input type="password" id="pwd" class="form-control">
-                                        <label for="pwd">Mot de Passe</label>
-                                    </div>
-                                    <div class="md-form">
-                                        <i class="fa fa-key prefix"></i>
-                                        <input type="password" id="pwdConfirm" class="form-control">
-                                        <label for="pwdConfirm">Confirmer Mot de Passe</label>
-                                    </div>
-                                    <div class="text-xs-center">
-                                        <button class="btn btn-primary btn-lg">Créer un compte</button>
+                                    <form method="post" action="../controllers/add_compte.php">
+                                        <?php
+                                            if (isset($_GET['error'])){
+                                                if($_GET['error'] == 1)
+                                                    $error = "Les deux mots de passe ne sont pas identiques!";
+                                                    echo "<h5 class='alert alert-danger alert-dismissible'><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>".$error."</h5>";
+                                            }
+                                        ?>
+                                        <div class="md-form">
+                                            <i class="fa fa-user prefix"></i>
+                                            <input type="text" id="matricule" class="form-control" name="matricule">
+                                            <label for="matricule">Matricule</label>
+                                        </div>
+                                        <div class="md-form">
+                                            <i class="fa fa-key prefix"></i>
+                                            <input type="password" id="pwd" class="form-control" name="pwd">
+                                            <label for="pwd">Mot de Passe</label>
+                                        </div>
+                                        <div class="md-form">
+                                            <i class="fa fa-key prefix"></i>
+                                            <input type="password" id="pwdConfirm" class="form-control" name="pwdconf">
+                                            <label for="pwdConfirm">Confirmer Mot de Passe</label>
+                                        </div>
+                                        <div class="text-xs-center">
+                                        <button class="btn btn-primary btn-lg" >Créer un compte</button>
                                         <hr>
                                     </div>
-
+                                    </form>
                                 </div>
                             </div>
                             <!--/.Form-->
