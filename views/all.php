@@ -43,7 +43,6 @@ session_start();
 </div>
 <div class="container">
     <div class="col-md-12">
-        <!--First review-->
         <?php foreach ($res as $pub){?>
             <div class="media">
 <!--                <a class="media-left waves-light">-->
@@ -65,26 +64,6 @@ session_start();
             </div>
             <hr>
         <?php }?>
-<!--        <!--Second review-->
-<!--        <div class="media">-->
-<!--            <a class="media-left waves-light">-->
-<!--                <img class="rounded-circle" src="" alt="Publication image">-->
-<!--            </a>-->
-<!--            <div class="media-body">-->
-<!--                <h5 class="media-heading">Titre Publication</h5>-->
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda. Earum sit id ullam eum vel delectus!-->
-<!--                    <a href="#">Lire la suite</a></p>-->
-<!--                <div class="col-xs-12"></div>-->
-<!--                <div class="col-xs-4">-->
-<!--                    <span class="right">Posté le 15/05/2018</span>-->
-<!--                </div>-->
-<!--                <div class="col-xs-8">-->
-<!--                    <span class="left"><a href="">Like</a>(12)</span>-->
-<!--                    <span class="left"><a href="">Dislike</a>(3)</span>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-
     </div>
 </div>
 <?php include_once ('foot.php');?>

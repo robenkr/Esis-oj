@@ -20,11 +20,17 @@ class PublicationDAO
 
     }
     public function top10() {
-
+        $pub = [];
+        $str = "SELECT * FROM publication ORDER BY nblike DESC LIMIT 10";
+        $req = $this->db->prepare($str);
+        $req->execute();
+        while($v = $req->fetch())
+            $pub[]= $v;
+        return $pub;
     }
     public function getAllPublication() {
         $pub = [];
-        $str = "SELECT * FROM publication";
+        $str = "SELECT * FROM publication ORDER BY id DESC";
         $req = $this->db->prepare($str);
         $req->execute();
         while($v = $req->fetch())
