@@ -23,7 +23,13 @@ class PublicationDAO
 
     }
     public function getAllPublication() {
-
+        $pub = [];
+        $str = "SELECT * FROM publication";
+        $req = $this->db->prepare($str);
+        $req->execute();
+        while($v = $req->fetch())
+            $pub[]= $v;
+        return $pub;
     }
     public function like($publication) {
 

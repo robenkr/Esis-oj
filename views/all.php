@@ -6,9 +6,13 @@ session_start();
  * Date: 05/04/2018
  * Time: 10:04 AM
  */
+    include_once('../controllers/recupAll_publication.php');
+
     if (!isset($_SESSION['matricule'])){
         header('Location: login.php') ;
     }
+//    var_dump($res);die();
+
 ?>
 <html>
 <head>
@@ -40,45 +44,47 @@ session_start();
 <div class="container">
     <div class="col-md-12">
         <!--First review-->
-        <div class="media">
-            <a class="media-left waves-light">
-                <img class="rounded-circle" src="" alt="Publication image">
-            </a>
-            <div class="media-body">
-                <h5 class="media-heading">Titre Publication</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda. Earum sit id ullam eum vel delectus!
-                    <a href="#">Lire la suite</a></p>
-                <div class="col-xs-12"></div>
-                <div class="col-xs-4">
-                    <span class="right">Posté le 05/04/2018</span>
-                </div>
-                <div class="col-xs-8">
-                    <span class="left"><a href="">Like</a>(9)</span>
-                    <span class="left"><a href="">Dislike</a>(9)</span>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <!--Second review-->
-        <div class="media">
-            <a class="media-left waves-light">
-                <img class="rounded-circle" src="" alt="Publication image">
-            </a>
-            <div class="media-body">
-                <h5 class="media-heading">Titre Publication</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda. Earum sit id ullam eum vel delectus!
-                    <a href="#">Lire la suite</a></p>
-                <div class="col-xs-12"></div>
-                <div class="col-xs-4">
-                    <span class="right">Posté le 15/05/2018</span>
-                </div>
-                <div class="col-xs-8">
-                    <span class="left"><a href="">Like</a>(12)</span>
-                    <span class="left"><a href="">Dislike</a>(3)</span>
+        <?php foreach ($res as $pub){?>
+            <div class="media">
+<!--                <a class="media-left waves-light">-->
+<!--                    <img class="rounded-circle" src="" alt="Publication image">-->
+<!--                </a>-->
+                <div class="media-body">
+<!--                    <h5 class="media-heading">--><?php //echo $pub['idEtudiant'];?><!--</h5>-->
+                    <p><?php echo $pub['contenu'];?>
+                        <a href="#">Lire la suite</a></p>
+                    <div class="col-xs-12"></div>
+                    <div class="col-xs-4">
+                        <span class="right">Posté le <?php echo $pub['date'];?></span>
+                    </div>
+                    <div class="col-xs-8">
+                        <span class="left"><a href="">Like</a>(<?php echo $pub['nblike'];?>)</span>
+                        <span class="left"><a href="">Dislike</a>(<?php echo $pub['nbdislike'];?>)</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <hr>
+            <hr>
+        <?php }?>
+<!--        <!--Second review-->
+<!--        <div class="media">-->
+<!--            <a class="media-left waves-light">-->
+<!--                <img class="rounded-circle" src="" alt="Publication image">-->
+<!--            </a>-->
+<!--            <div class="media-body">-->
+<!--                <h5 class="media-heading">Titre Publication</h5>-->
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda. Earum sit id ullam eum vel delectus!-->
+<!--                    <a href="#">Lire la suite</a></p>-->
+<!--                <div class="col-xs-12"></div>-->
+<!--                <div class="col-xs-4">-->
+<!--                    <span class="right">Posté le 15/05/2018</span>-->
+<!--                </div>-->
+<!--                <div class="col-xs-8">-->
+<!--                    <span class="left"><a href="">Like</a>(12)</span>-->
+<!--                    <span class="left"><a href="">Dislike</a>(3)</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
     </div>
 </div>
 <?php include_once ('foot.php');?>
