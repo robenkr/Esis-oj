@@ -24,7 +24,7 @@
             session_start();
             $_SESSION['matricule'] = $matricule;
 
-            header('Location: ../views/today.php');
+            header('Location: ../views/accueil.php');
         } else {
             header('Location: ../views/login.php?error=3');
         }

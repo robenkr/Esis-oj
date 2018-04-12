@@ -38,6 +38,13 @@
                 <!--Links-->
                 <div class="col-md-7 offset-md-3 car-block">
                     <form method="post" action="../controllers/new_connexion.php">
+                        <?php
+                        if (isset($_GET['error'])){
+                            if($_GET['error'] == 3)
+                                $error = "Matricule ou mot de passe incorrect!";
+                            echo "<h5 class='alert alert-danger alert-dismissible'><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>".$error."</h5>";
+                        }
+                        ?>
                         <div class="col-md-4">
                             <i class="fa fa-user prefix"></i>
                             <input type="text" id="mymatricule" class="form-control" name="matricule">
