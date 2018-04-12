@@ -14,16 +14,16 @@ class EtudiantDAO
         $this->db = ConnexionDB::getConnexion();
     }
     public function seConnecter($etudiant){
-        $str = "SELECT * FROM etudiant WHERE matricule = :matricule AND pwd =  :pwd";
+        $str = "SELECT * FROM etudiant WHERE matricule = :matricule";
         $req = $this->db->prepare($str);
         $req->execute(array(
-            'matricule' => $etudiant->getMatricule(),
-            'pwd' => $etudiant->getPwd()
+            'matricule' => $etudiant->getMatricule()
         ));
-
-        $res = $req->fetch();
-
-        if($res != null) {
+        while ($res = $req->fetch()) {
+             $user[] = $res;
+         }
+        $user = $user[0];
+        if($user != null && password_verify($etudiant->getPwd(),$user['pwd'])) {
             return True;
         } else {
             return False;

@@ -1,4 +1,6 @@
 <?php
+session_start();
+    $error ='';
 ?>
 <html>
 <head>
@@ -40,9 +42,11 @@
                     <form method="post" action="../controllers/new_connexion.php">
                         <?php
                         if (isset($_GET['error'])){
-                            if($_GET['error'] == 3)
+                            if($_GET['error'] == 3){
                                 $error = "Matricule ou mot de passe incorrect!";
-                            echo "<h5 class='alert alert-danger alert-dismissible'><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>".$error."</h5>";
+                                echo "<h5 class='alert alert-danger alert-dismissible'><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>".$error."</h5>";
+                            }
+
                         }
                         ?>
                         <div class="col-md-4">
@@ -100,9 +104,11 @@
                                     <form method="post" action="../controllers/add_compte.php">
                                         <?php
                                             if (isset($_GET['error'])){
-                                                if($_GET['error'] == 1)
+                                                if($_GET['error'] == 1){
                                                     $error = "Les deux mots de passe ne sont pas identiques!";
                                                     echo "<h5 class='alert alert-danger alert-dismissible'><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>".$error."</h5>";
+                                                }
+
                                             }
                                         ?>
                                         <div class="md-form">

@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: ROBEN
@@ -21,7 +22,6 @@
         if($res) {
             //Créer une session
 
-            session_start();
             $_SESSION['matricule'] = $matricule;
 
             header('Location: ../views/accueil.php');

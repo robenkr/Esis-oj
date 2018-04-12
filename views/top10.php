@@ -1,10 +1,14 @@
 <?php
+session_start();
 /**
  * Created by PhpStorm.
  * User: ROBEN
  * Date: 05/04/2018
  * Time: 10:04 AM
  */
+if (!isset($_SESSION['matricule'])){
+    header('Location: login.php') ;
+}
 ?>
 <html>
 <head>

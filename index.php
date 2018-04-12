@@ -8,7 +8,7 @@
 if (session_status() == PHP_SESSION_NONE){
     session_start();
 }
-if (!isset($_SESSION['user']) && ($_SERVER['QUERY_STRING'] != "views/login.php")){
+if (!isset($_SESSION['matricule']) && ($_SERVER['QUERY_STRING'] != "views/login.php")){
     header('Location: views/login.php') ;
 }
 //    header ('Location: views/index.php');

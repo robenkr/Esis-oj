@@ -15,7 +15,7 @@
         $pwdconf = $_POST['pwdconf'];
 
         if ($pwd == $pwdconf){
-//            $pwd = password_hash($pwd,PASSWORD_BCRYPT);
+           $pwd = password_hash($pwd,PASSWORD_BCRYPT);
             $etudiant = new Etudiant(0,$matricule,$pwd);
             $etudao = new EtudiantDAO();
 
@@ -26,7 +26,7 @@
                 session_start();
                 $_SESSION['matricule'] = $matricule;
 
-                header('Location: ../views/accueil.php');
+                header('Location: ../views/login.php');
             } else {
                 header('Location: ../views/login.php?error=2');
             }
