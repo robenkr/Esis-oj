@@ -17,7 +17,19 @@ class PublicationDAO
 
     }
     public function nouvellePublication($publication) {
+        $str = "INSERT INTO publication VALUES(null, :idEtudiant, :contenu, :date, null, null)";
+        $req = $this->db->prepare($str);
+        $res = $req->execute(array(
+            'idEtudiant' => $publication->getIdEtudiant(),
+            'contenu' => $publication->getContenu(),
+            'date' => $publication->getDate()
+        ));
 
+        if($res) {
+            return True;
+        } else {
+            return False;
+        }
     }
     public function top10() {
         $pub = [];

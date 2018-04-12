@@ -43,4 +43,19 @@ class EtudiantDAO
             return False;
         }
     }
+    public function selectId($matricule){
+        $str = "SELECT id FROM etudiant WHERE matricule = :matricule";
+        $req = $this->db->prepare($str);
+        $req->execute(array(
+            'matricule' => $etudiant->getMatricule()
+        ));
+        while ($res = $req->fetch()) {
+            $user = $res;
+        }
+        if($user != null) {
+            return True;
+        } else {
+            return False;
+        }
+    }
 }

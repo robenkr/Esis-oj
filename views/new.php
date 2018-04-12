@@ -9,6 +9,7 @@ session_start();
 if (!isset($_SESSION['matricule'])){
     header('Location: login.php') ;
 }
+//var_dump($_SESSION);die();
 ?>
 <html>
 <head>
@@ -33,12 +34,13 @@ if (!isset($_SESSION['matricule'])){
 <?php include_once ('head.php');?>
 <!--/.Navbar-->
 <div class="container">
-    <form action="">
+    <form action="../controllers/add_publication.php" method="post">
         <br><br><br>
         <!--Textarea with icon prefix-->
         <div class="md-form">
             <i class="fa fa-pencil prefix"></i>
-            <textarea type="text" id="form8" class="md-textarea"></textarea>
+            <input type="hidden" name="idUser" value="<?php $_SESSION['matricule']?>">
+            <textarea type="text" id="form8" class="md-textarea" name="publication"></textarea>
             <label for="form8">Nouvelle Publication</label>
         </div>
         <div class="">

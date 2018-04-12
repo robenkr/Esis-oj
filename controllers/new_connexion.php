@@ -21,7 +21,6 @@ session_start();
 
         if($res) {
             //Créer une session
-
             $_SESSION['matricule'] = $matricule;
 
             header('Location: ../views/accueil.php');
