@@ -6,9 +6,12 @@ session_start();
  * Date: 05/04/2018
  * Time: 10:04 AM
  */
+    include_once('../controllers/recup_today.php');
     if (!isset($_SESSION['matricule'])){
         header('Location: login.php') ;
+
     }
+//    var_dump($res);die();
 ?>
 <html>
 <head>
@@ -35,9 +38,28 @@ session_start();
 <div class="container-fluid">
     <form action="new.php">
         <br><br><br>
-        <div class="col-md-7 offset-md-5">
-            <p>Aucune Publication</p>
-            <button class="btn btn-success btn-lg">Publier</button>
+        <div class="col-md-10 offset-md-1">
+            <?php if (empty($res)){?>
+                <p>Aucune Publication</p>
+                <button class="btn btn-success btn-lg">Publier</button>
+            <?php } else{?>
+                <div class="media">
+                    <div class="media-body">
+                        <p><?php echo $res['contenu'];?>
+<!--                            <a href="#">Lire la suite</a></p>-->
+                        <div class="col-xs-12"></div>
+                        <div class="col-xs-4">
+                            <span class="right">Post&eacute; le <?php echo $res['date'];?></span>
+                        </div>
+                        <div class="col-xs-8">
+                            <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $res['id'];?>">Like</a>(<?php echo $res['nblike'];?>)</span>
+                            <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $res['id'];?>">Dislike</a>(<?php echo $res['nbdislike'];?>)</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <?php }?>
+
         </div>
     </form>
 </div>

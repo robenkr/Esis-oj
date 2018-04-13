@@ -17,12 +17,11 @@ class PublicationDAO
 
     }
     public function nouvellePublication($publication) {
-        $str = "INSERT INTO publication VALUES(null,:idEtudiant,:contenu,:date, :nblike, :nbdislike)";
+        $str = "INSERT INTO publication VALUES(null,:idEtudiant,:contenu,now(), :nblike, :nbdislike)";
         $req = $this->db->prepare($str);
         $res = $req->execute(array(
             'idEtudiant' => $publication->getIdEtudiant(),
             'contenu' => $publication->getContenu(),
-            'date' => $publication->getDate(),
             'nblike' => $publication->getNblike(),
             'nbdislike' => $publication->getNbdislike()
         ));
@@ -32,6 +31,16 @@ class PublicationDAO
         } else {
             return False;
         }
+    }
+    public function today($date) {
+        $pub = [];
+        $str = "SELECT * FROM publication WHERE date LIKE ? ORDER BY date DESC";
+        $req = $this->db->prepare($str);
+        $req->execute([$date.'%']);
+        while($v = $req->fetch())
+            $pub[]= $v;
+        $pub = $pub[0];
+        return $pub;
     }
     public function top10() {
         $pub = [];

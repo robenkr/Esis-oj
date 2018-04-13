@@ -35,7 +35,7 @@ session_start();
 <!--/.Navbar-->
 <!--Header-->
 <div class="text-xs-center">
-    <h3><i class="fa fa-star"></i> Top 1</h3>
+    <h3><i class="fa fa-star"></i> Top 10</h3>
     <hr>
 </div>
 <div class="container">
