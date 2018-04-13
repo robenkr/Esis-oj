@@ -50,9 +50,29 @@ class PublicationDAO
         return $pub;
     }
     public function like($publication) {
+        $str = "UPDATE publication SET nblike = nblike + 1 WHERE id = :id";
+        $req = $this->db->prepare($str);
+        $res = $req->execute(array(
+            'id'=>$publication->getId()
+        ));
 
+        if($res) {
+            return True;
+        } else {
+            return False;
+        }
     }
     public function dislike($publication) {
+        $str = "UPDATE publication SET nbdislike = nbdislike + 1 WHERE id = :id";
+        $req = $this->db->prepare($str);
+        $res = $req->execute(array(
+            'id'=>$publication->getId()
+        ));
 
+        if($res) {
+            return True;
+        } else {
+            return False;
+        }
     }
 }

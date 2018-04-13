@@ -12,7 +12,7 @@
         $pub = new Publication(0,$idUser,$publication,date('d-m-Y'),0,0);
         $pubdao = new PublicationDAO();
 
-        $result = $pubdao -> nouvellePublication($pubdao);
+        $result = $pubdao -> nouvellePublication($pub);
         if ($result){
             header('Location: ../views/all.php');
         }

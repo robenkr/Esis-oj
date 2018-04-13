@@ -49,16 +49,16 @@ session_start();
 <!--                    <img class="rounded-circle" src="" alt="Publication image">-->
 <!--                </a>-->
                 <div class="media-body">
-<!--                    <h5 class="media-heading">--><?php //echo $pub['idEtudiant'];?><!--</h5>-->
+                    <h5 class="media-heading"><?php echo $pub['id'];?></h5>
                     <p><?php echo $pub['contenu'];?>
-                        <a href="#">Lire la suite</a></p>
+<!--                        <a href="#">Lire la suite</a></p>-->
                     <div class="col-xs-12"></div>
                     <div class="col-xs-4">
                         <span class="right">Posté le <?php echo $pub['date'];?></span>
                     </div>
                     <div class="col-xs-8">
-                        <span class="left"><a href="">Like</a>(<?php echo $pub['nblike'];?>)</span>
-                        <span class="left"><a href="">Dislike</a>(<?php echo $pub['nbdislike'];?>)</span>
+                        <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $pub['id'];?>">Like</a>(<?php echo $pub['nblike'];?>)</span>
+                        <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $pub['id'];?>">Dislike</a>(<?php echo $pub['nbdislike'];?>)</span>
                     </div>
                 </div>
             </div>

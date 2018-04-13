@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7510bb6d-23ae-4f39-86e3-f84803d3d4fc" name="Default" comment="fonctions add_compte and new_compte added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/add_publication.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/add_dislike.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/add_like.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/new_connexion.php" afterPath="$PROJECT_DIR$/controllers/new_connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/dao/etudiant.dao.php" afterPath="$PROJECT_DIR$/models/dao/etudiant.dao.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/add_publication.php" afterPath="$PROJECT_DIR$/controllers/add_publication.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/dao/publication.dao.php" afterPath="$PROJECT_DIR$/models/dao/publication.dao.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/new.php" afterPath="$PROJECT_DIR$/views/new.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/all.php" afterPath="$PROJECT_DIR$/views/all.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,28 +27,50 @@
       <file leaf-file-name="new.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/new.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="84" />
+            <state relative-caret-position="253">
+              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="publication.dao.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/dao/publication.dao.php">
+      <file leaf-file-name="all.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/all.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+            <state relative-caret-position="347">
+              <caret line="60" column="113" lean-forward="false" selection-start-line="60" selection-start-column="113" selection-end-line="60" selection-end-column="113" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="etudiant.dao.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/dao/etudiant.dao.php">
+      <file leaf-file-name="add_compte.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/add_compte.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_like.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/add_like.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="17" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add_dislike.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/add_dislike.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -57,18 +79,18 @@
       <file leaf-file-name="add_publication.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/add_publication.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+            <state relative-caret-position="253">
+              <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="etudiant.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/structure/etudiant.class.php">
+      <file leaf-file-name="publication.dao.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/dao/publication.dao.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+            <state relative-caret-position="276">
+              <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -77,8 +99,8 @@
       <file leaf-file-name="publication.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/structure/publication.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="33" />
+            <state relative-caret-position="161">
+              <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="16" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -103,13 +125,15 @@
         <option value="$PROJECT_DIR$/views/login.php" />
         <option value="$PROJECT_DIR$/controllers/add_compte.php" />
         <option value="$PROJECT_DIR$/controllers/recup_top10.php" />
-        <option value="$PROJECT_DIR$/views/all.php" />
         <option value="$PROJECT_DIR$/views/top10.php" />
         <option value="$PROJECT_DIR$/controllers/new_connexion.php" />
-        <option value="$PROJECT_DIR$/models/dao/etudiant.dao.php" />
-        <option value="$PROJECT_DIR$/views/new.php" />
-        <option value="$PROJECT_DIR$/models/dao/publication.dao.php" />
         <option value="$PROJECT_DIR$/controllers/add_publication.php" />
+        <option value="$PROJECT_DIR$/views/new.php" />
+        <option value="$PROJECT_DIR$/models/dao/etudiant.dao.php" />
+        <option value="$PROJECT_DIR$/views/all.php" />
+        <option value="$PROJECT_DIR$/controllers/add_like.php" />
+        <option value="$PROJECT_DIR$/models/dao/publication.dao.php" />
+        <option value="$PROJECT_DIR$/controllers/add_dislike.php" />
       </list>
     </option>
   </component>
@@ -221,7 +245,7 @@
       <option name="presentableId" value="Default" />
       <updated>1523476159808</updated>
       <workItem from="1523476161190" duration="5018000" />
-      <workItem from="1523546624487" duration="6567000" />
+      <workItem from="1523546624487" duration="10820000" />
     </task>
     <task id="LOCAL-00001" summary="class publication added">
       <created>1523476782045</created>
@@ -269,13 +293,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11585000" />
+    <option name="totallyTimeSpent" value="15838000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1378" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25417298" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25113463" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -450,10 +474,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/all.php">
+    <entry file="file://$PROJECT_DIR$/controllers/new_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        <state relative-caret-position="276">
+          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -466,10 +490,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/add_publication.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="60" column="113" lean-forward="false" selection-start-line="60" selection-start-column="113" selection-end-line="60" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/add_compte.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        <state relative-caret-position="238">
+          <caret line="21" column="34" lean-forward="true" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="false" />
           </folding>
@@ -478,48 +526,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/dao/etudiant.dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="14" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/new_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="84" />
+        <state relative-caret-position="-257">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/structure/publication.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="34" column="33" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/add_publication.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+        <state relative-caret-position="161">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="16" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/dao/publication.dao.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="22" column="55" lean-forward="false" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+        <state relative-caret-position="276">
+          <caret line="65" column="44" lean-forward="false" selection-start-line="65" selection-start-column="44" selection-end-line="65" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/add_like.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="17" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/add_dislike.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
           <folding />
         </state>
       </provider>
