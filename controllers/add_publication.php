@@ -7,7 +7,7 @@
 
     if (isset($_POST['publication'], $_POST['idUser'])){
         $publication = $_POST['publication'];
-        $idUser = $_POST['idUser'];
+        $idUser = 1;
 
         $pub = new Publication(0,$idUser,$publication,date('d-m-Y'),0,0);
         $pubdao = new PublicationDAO();

@@ -9,7 +9,7 @@ session_start();
 if (!isset($_SESSION['matricule'])){
     header('Location: login.php') ;
 }
-//var_dump($_SESSION);die();
+var_dump($_SESSION);die();
 ?>
 <html>
 <head>

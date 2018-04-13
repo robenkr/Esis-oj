@@ -63,6 +63,8 @@ session_start();
         <?php }?>
     </div>
 </div>
+<br>
+<div class="clearfix"></div>
 <?php include_once ('foot.php');?>
 <!-- SCRIPTS -->
 

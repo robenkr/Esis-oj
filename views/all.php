@@ -54,7 +54,7 @@ session_start();
 <!--                        <a href="#">Lire la suite</a></p>-->
                     <div class="col-xs-12"></div>
                     <div class="col-xs-4">
-                        <span class="right">Posté le <?php echo $pub['date'];?></span>
+                        <span class="right">Post&eacute; le <?php echo $pub['date'];?></span>
                     </div>
                     <div class="col-xs-8">
                         <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $pub['id'];?>">Like</a>(<?php echo $pub['nblike'];?>)</span>
@@ -66,6 +66,8 @@ session_start();
         <?php }?>
     </div>
 </div>
+<br>
+<div class="clearfix"></div>
 <?php include_once ('foot.php');?>
 <!-- SCRIPTS -->
 
