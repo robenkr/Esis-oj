@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7510bb6d-23ae-4f39-86e3-f84803d3d4fc" name="Default" comment="fonctions add_compte and new_compte added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/add_dislike.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/add_like.php" />
+    <list default="true" id="7510bb6d-23ae-4f39-86e3-f84803d3d4fc" name="Default" comment="fonctions like and dislike ajoutee dans top10!">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/add_publication.php" afterPath="$PROJECT_DIR$/controllers/add_publication.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/dao/publication.dao.php" afterPath="$PROJECT_DIR$/models/dao/publication.dao.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/all.php" afterPath="$PROJECT_DIR$/views/all.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/top10.php" afterPath="$PROJECT_DIR$/views/top10.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +24,17 @@
         <entry file="file://$PROJECT_DIR$/views/new.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="28" />
+              <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="top10.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/top10.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -37,8 +43,8 @@
       <file leaf-file-name="all.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/all.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="60" column="113" lean-forward="false" selection-start-line="60" selection-start-column="113" selection-end-line="60" selection-end-column="113" />
+            <state relative-caret-position="94">
+              <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -66,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_dislike.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="add_dislike.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/add_dislike.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="322">
@@ -125,7 +131,6 @@
         <option value="$PROJECT_DIR$/views/login.php" />
         <option value="$PROJECT_DIR$/controllers/add_compte.php" />
         <option value="$PROJECT_DIR$/controllers/recup_top10.php" />
-        <option value="$PROJECT_DIR$/views/top10.php" />
         <option value="$PROJECT_DIR$/controllers/new_connexion.php" />
         <option value="$PROJECT_DIR$/controllers/add_publication.php" />
         <option value="$PROJECT_DIR$/views/new.php" />
@@ -134,6 +139,7 @@
         <option value="$PROJECT_DIR$/controllers/add_like.php" />
         <option value="$PROJECT_DIR$/models/dao/publication.dao.php" />
         <option value="$PROJECT_DIR$/controllers/add_dislike.php" />
+        <option value="$PROJECT_DIR$/views/top10.php" />
       </list>
     </option>
   </component>
@@ -245,7 +251,7 @@
       <option name="presentableId" value="Default" />
       <updated>1523476159808</updated>
       <workItem from="1523476161190" duration="5018000" />
-      <workItem from="1523546624487" duration="10820000" />
+      <workItem from="1523546624487" duration="11099000" />
     </task>
     <task id="LOCAL-00001" summary="class publication added">
       <created>1523476782045</created>
@@ -289,11 +295,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523480105265</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fonctions like and dislike finis!">
+      <created>1523601599566</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1523601599566</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15838000" />
+    <option name="totallyTimeSpent" value="16117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -301,11 +314,12 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25113463" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Coding Bot" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26213592" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3446602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -360,7 +374,9 @@
     <MESSAGE value="class EtudiantDAO added" />
     <MESSAGE value="class PublicationDAO added" />
     <MESSAGE value="fonctions add_compte and new_compte added" />
-    <option name="LAST_COMMIT_MESSAGE" value="fonctions add_compte and new_compte added" />
+    <MESSAGE value="fonctions like and dislike finis!" />
+    <MESSAGE value="fonctions like and dislike ajoutee dans top10!" />
+    <option name="LAST_COMMIT_MESSAGE" value="fonctions like and dislike ajoutee dans top10!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -450,14 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/top10.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="62" column="17" lean-forward="false" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/recup_top10.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -490,26 +498,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/new.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/add_publication.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="53" lean-forward="true" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/all.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="60" column="113" lean-forward="false" selection-start-line="60" selection-start-column="113" selection-end-line="60" selection-end-column="113" />
           <folding />
         </state>
       </provider>
@@ -560,6 +552,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="17" column="37" lean-forward="false" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/new.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/all.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="49" column="27" lean-forward="true" selection-start-line="49" selection-start-column="27" selection-end-line="49" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/top10.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="53" column="56" lean-forward="false" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
           <folding />
         </state>
       </provider>

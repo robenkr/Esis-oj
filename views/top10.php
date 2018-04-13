@@ -51,11 +51,11 @@ session_start();
                         <a href="#">Lire la suite</a></p>
                     <div class="col-xs-12"></div>
                     <div class="col-xs-4">
-                        <span class="right">Posté le <?php echo $pub['date'];?></span>
+                        <span class="right">Post&eacute; le <?php echo $pub['date'];?></span>
                     </div>
                     <div class="col-xs-8">
-                        <span class="left"><a href="">Like</a>(<?php echo $pub['nblike'];?>)</span>
-                        <span class="left"><a href="">Dislike</a>(<?php echo $pub['nbdislike'];?>)</span>
+                        <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $pub['id'];?>">Like</a>(<?php echo $pub['nblike'];?>)</span>
+                        <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $pub['id'];?>">Dislike</a>(<?php echo $pub['nbdislike'];?>)</span>
                     </div>
                 </div>
             </div>
