@@ -34,12 +34,11 @@ class PublicationDAO
     }
     public function today($date) {
         $pub = [];
-        $str = "SELECT * FROM publication WHERE date LIKE ? ORDER BY date DESC";
+        $str = "SELECT * FROM publication WHERE date LIKE ? ORDER BY id DESC";
         $req = $this->db->prepare($str);
-        $req->execute([$date.'%']);
+        $req->execute(['%'.$date.'%']);
         while($v = $req->fetch())
             $pub[]= $v;
-        $pub = $pub[0];
         return $pub;
     }
     public function top10() {

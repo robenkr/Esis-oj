@@ -42,23 +42,23 @@ session_start();
             <?php if (empty($res)){?>
                 <p>Aucune Publication</p>
                 <button class="btn btn-success btn-lg">Publier</button>
-            <?php } else{?>
+            <?php } else{foreach ($res as $pub){?>
                 <div class="media">
                     <div class="media-body">
-                        <p><?php echo $res['contenu'];?>
+                        <p><?php echo $pub['contenu'];?>
 <!--                            <a href="#">Lire la suite</a></p>-->
                         <div class="col-xs-12"></div>
                         <div class="col-xs-4">
-                            <span class="right">Post&eacute; le <?php echo $res['date'];?></span>
+                            <span class="right">Post&eacute; le <?php echo $pub['date'];?></span>
                         </div>
                         <div class="col-xs-8">
-                            <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $res['id'];?>">Like</a>(<?php echo $res['nblike'];?>)</span>
-                            <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $res['id'];?>">Dislike</a>(<?php echo $res['nbdislike'];?>)</span>
+                            <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $pub['id'];?>">Like</a>(<?php echo $pub['nblike'];?>)</span>
+                            <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $pub['id'];?>">Dislike</a>(<?php echo $pub['nbdislike'];?>)</span>
                         </div>
                     </div>
                 </div>
                 <hr>
-            <?php }?>
+            <?php }}?>
 
         </div>
     </form>
