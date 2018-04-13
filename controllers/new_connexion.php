@@ -18,10 +18,10 @@ session_start();
         $etudao = new EtudiantDAO();
 
         $res = $etudao->seConnecter($etudiant);
-
         if($res) {
             //Créer une session
             $_SESSION['matricule'] = $matricule;
+            $_SESSION['id'] = $res['id'];
 
             header('Location: ../views/accueil.php');
         } else {

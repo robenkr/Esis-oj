@@ -9,7 +9,7 @@ session_start();
 if (!isset($_SESSION['matricule'])){
     header('Location: login.php') ;
 }
-var_dump($_SESSION);die();
+//var_dump($_SESSION);die();
 ?>
 <html>
 <head>
@@ -39,7 +39,7 @@ var_dump($_SESSION);die();
         <!--Textarea with icon prefix-->
         <div class="md-form">
             <i class="fa fa-pencil prefix"></i>
-            <input type="hidden" name="idUser" value="<?php $_SESSION['matricule']?>">
+            <input type="hidden" name="idUser" value="<?php echo $_SESSION['id']?>">
             <textarea type="text" id="form8" class="md-textarea" name="publication"></textarea>
             <label for="form8">Nouvelle Publication</label>
         </div>

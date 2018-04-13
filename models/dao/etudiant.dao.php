@@ -24,7 +24,7 @@ class EtudiantDAO
          }
         $user = $user[0];
         if($user != null && password_verify($etudiant->getPwd(),$user['pwd'])) {
-            return True;
+            return $user;
         } else {
             return False;
         }

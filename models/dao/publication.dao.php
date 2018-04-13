@@ -24,7 +24,7 @@ class PublicationDAO
             'contenu' => $publication->getContenu(),
             'date' => $publication->getDate(),
             'nblike' => $publication->getNblike(),
-            'nbdislike' => $publication->getNbdislike(),
+            'nbdislike' => $publication->getNbdislike()
         ));
 
         if($res) {
