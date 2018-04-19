@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7510bb6d-23ae-4f39-86e3-f84803d3d4fc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/dislike_comment.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/like_comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/add_compte.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/add_compte.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/all.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/all.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/commenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/commenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/top10.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/top10.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,38 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="commentaire.dao.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/dao/commentaire.dao.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="56" column="20" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add_dislike.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/add_dislike.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="25" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dislike_comment.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/dislike_comment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="46" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="commenter.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="commenter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/commenter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="86" column="85" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
+            <state relative-caret-position="204">
+              <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -98,9 +65,9 @@
         <option value="$PROJECT_DIR$/views/login.php" />
         <option value="$PROJECT_DIR$/views/all.php" />
         <option value="$PROJECT_DIR$/views/top10.php" />
-        <option value="$PROJECT_DIR$/views/commenter.php" />
         <option value="$PROJECT_DIR$/controllers/like_comment.php" />
         <option value="$PROJECT_DIR$/controllers/dislike_comment.php" />
+        <option value="$PROJECT_DIR$/views/commenter.php" />
       </list>
     </option>
   </component>
@@ -201,7 +168,7 @@
       <workItem from="1523608496392" duration="86000" />
       <workItem from="1524114106301" duration="1190000" />
       <workItem from="1524129362660" duration="12093000" />
-      <workItem from="1524163458139" duration="1740000" />
+      <workItem from="1524163458139" duration="2611000" />
     </task>
     <task id="LOCAL-00001" summary="class publication added">
       <created>1523476782045</created>
@@ -301,11 +268,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524142642094</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Like and dislike comments end!!!">
+      <created>1524165297535</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1524165297535</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37468000" />
+    <option name="totallyTimeSpent" value="38339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -315,10 +289,10 @@
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="right" id="Coding Bot" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32954547" />
+      <window_info anchor="bottom" id="Version Control" order="3" weight="0.3116883" />
       <window_info anchor="bottom" id="Run" order="8" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22541603" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.22541603" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="JSON Utils" order="3" />
       <window_info anchor="right" id="Database" order="1" />
@@ -383,7 +357,8 @@
     <MESSAGE value="Everything END" />
     <MESSAGE value="Adaption des commentaires" />
     <MESSAGE value="Ajouter des commentaires finis!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajouter des commentaires finis!!!" />
+    <MESSAGE value="Like and dislike comments end!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Like and dislike comments end!!!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/models/dao/etudiant.dao.php">
@@ -687,13 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/commenter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="86" column="85" selection-start-line="86" selection-start-column="85" selection-end-line="86" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/structure/publication.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -722,6 +690,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/dislike_comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/add_dislike.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -736,10 +711,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/dislike_comment.php">
+    <entry file="file://$PROJECT_DIR$/views/commenter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="46" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="46" />
+        <state relative-caret-position="204">
+          <caret line="63" column="63" selection-start-line="63" selection-start-column="63" selection-end-line="63" selection-end-column="63" />
         </state>
       </provider>
     </entry>

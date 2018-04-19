@@ -61,15 +61,16 @@ if (!isset($_SESSION['matricule'])){
             <div class="media">
                 <div class="media-body">
 <!--                    <h5 class="media-heading">--><?php //echo $idPub;?><!--</h5>-->
-                    <p><?php echo $contenu;?></p>
-                    <div class="col-xs-12"></div>
-                    <div class="col-xs-4">
-                        <span class="right">Post&eacute; le <?php echo $date;?></span>
-                    </div>
-                    <div class="col-xs-8">
+                    <p class="col-xs-10"><?php echo $contenu;?></p>
+                    <div class="col-xs-2">
                         <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $idPub;?>">Like</a>(<?php echo $nbLike;?>)</span>
                         <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $idPub;?>">Dislike</a>(<?php echo $nbDislike;?>)</span>
                     </div>
+                    <div class="col-xs-12">
+                        <span class="right">Post&eacute; le <?php echo $date;?></span>
+                    </div>
+
+
                 </div>
             </div>
     </div>
@@ -77,15 +78,16 @@ if (!isset($_SESSION['matricule'])){
         <?php foreach ($res as $com){?>
         <div class="media">
             <div class="media-body">
-                <h5 class="media-heading"><?php echo $com['id'];?></h5>
+<!--                <h5 class="media-heading">--><?php //echo $com['id'];?><!--</h5>-->
                 <p><?php echo $com['contenu'];?></p>
-                <div class="col-xs-12"></div>
-                <div class="col-xs-4">
-                    <span class="right">Post&eacute; le <?php echo $com['date'];?></span>
-                </div>
-                <div class="col-xs-8">
-                    <span class="left"><a href="../controllers/like_comment.php?idCom=<?php echo $com['id'];?>">Like</a>(<?php echo $com['nblike'];?>)</span>
-                    <span class="left"><a href="../controllers/dislike_comment.php?idCom=<?php echo $com['id'];?>">Dislike</a>(<?php echo $com['nbdislike'];?>)</span>
+                <div class="col-xs-12">
+                    <div class="col-xs-8">
+                        <span class="right">Post&eacute; le <?php echo $com['date'];?></span>
+                    </div>
+                    <div class="col-xs-4">
+                        <span class="left"><a href="../controllers/like_comment.php?idCom=<?php echo $com['id'];?>">Like</a>(<?php echo $com['nblike'];?>)</span>
+                        <span class="left"><a href="../controllers/dislike_comment.php?idCom=<?php echo $com['id'];?>">Dislike</a>(<?php echo $com['nbdislike'];?>)</span>
+                    </div>
                 </div>
             </div>
         </div>
