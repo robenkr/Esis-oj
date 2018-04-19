@@ -84,8 +84,8 @@ if (!isset($_SESSION['matricule'])){
                     <span class="right">Post&eacute; le <?php echo $com['date'];?></span>
                 </div>
                 <div class="col-xs-8">
-                    <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $com['id'];?>">Like</a>(<?php echo $com['nblike'];?>)</span>
-                    <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $com['id'];?>">Dislike</a>(<?php echo $com['nbdislike'];?>)</span>
+                    <span class="left"><a href="../controllers/like_comment.php?idCom=<?php echo $com['id'];?>">Like</a>(<?php echo $com['nblike'];?>)</span>
+                    <span class="left"><a href="../controllers/dislike_comment.php?idCom=<?php echo $com['id'];?>">Dislike</a>(<?php echo $com['nbdislike'];?>)</span>
                 </div>
             </div>
         </div>

@@ -50,8 +50,8 @@ session_start();
 <!--                </a>-->
                 <div class="media-body">
                     <h5 class="media-heading"><?php echo $pub['id'];?></h5>
-                    <p><?php echo $pub['contenu'];?>
-                        <a href="../views/commenter.php?idUser=<?php echo $_SESSION['id']?>&idPub=<?php echo $pub['id'];?>&contenu=<?php echo $pub['contenu'];?>&date=<?php echo $pub['date'];?>&nblike=<?php echo $pub['nblike'];?>&dislike=<?php echo $pub['nbdislike'];?>">commenter</a></p>
+                    <p><?php echo $pub['contenu'];?>...
+                        <a href="../views/commenter.php?idUser=<?php echo $_SESSION['id']?>&idPub=<?php echo $pub['id'];?>&contenu=<?php echo $pub['contenu'];?>&date=<?php echo $pub['date'];?>&nblike=<?php echo $pub['nblike'];?>&dislike=<?php echo $pub['nbdislike'];?>">Lire la suite</a></p>
                     <div class="col-xs-12"></div>
                     <div class="col-xs-4">
                         <span class="right">Post&eacute; le <?php echo $pub['date'];?></span>

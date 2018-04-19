@@ -110,6 +110,13 @@ session_start();
                                                 }
 
                                             }
+                                        if (isset($_GET['success'])){
+                                            if($_GET['success'] == 1){
+                                                $error = "Votre compte a été créer avec success!";
+                                                echo "<h5 class='alert alert-success alert-dismissible'><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>".$error."</h5>";
+                                            }
+
+                                        }
                                         ?>
                                         <div class="md-form">
                                             <i class="fa fa-user prefix"></i>
