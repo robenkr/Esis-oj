@@ -17,11 +17,11 @@ class CommentaireDAO
         $str = "INSERT INTO commentaire VALUES(null,:idEtudiant, :idPublication, :contenu,now(), :nblike, :nbdislike)";
         $req = $this->db->prepare($str);
         $res = $req->execute(array(
-            'idEtudiant' => $publication->getIdEtudiant(),
-            'idEtudiant' => $publication->getIdPublication(),
-            'contenu' => $publication->getContenu(),
-            'nblike' => $publication->getNblike(),
-            'nbdislike' => $publication->getNbdislike()
+            'idEtudiant' => $commentaire->getIdEtudiant(),
+            'idPublication' => $commentaire->getIdPublication(),
+            'contenu' => $commentaire->getContenu(),
+            'nblike' => $commentaire->getNblike(),
+            'nbdislike' => $commentaire->getNbdislike()
         ));
 
         if($res) {
@@ -30,11 +30,13 @@ class CommentaireDAO
             return False;
         }
     }
-    public function getAllCommentaires() {
+    public function getAllCommentaires($commentaire) {
         $pub = [];
-        $str = "SELECT * FROM commentaire ORDER BY date ASC";
+        $str = "SELECT * FROM commentaire WHERE idPublication = :idPublication ORDER BY date ASC";
         $req = $this->db->prepare($str);
-        $req->execute();
+        $req->execute(array(
+            'idPublication' => $commentaire->getIdPublication()
+        ));
         while($v = $req->fetch())
             $pub[]= $v;
         return $pub;
@@ -43,7 +45,7 @@ class CommentaireDAO
         $str = "UPDATE commentaire SET nblike = nblike + 1 WHERE id = :id";
         $req = $this->db->prepare($str);
         $res = $req->execute(array(
-            'id'=>$publication->getId()
+            'id'=>$commentaire->getId()
         ));
 
         if($res) {
@@ -56,7 +58,7 @@ class CommentaireDAO
         $str = "UPDATE commentaire SET nbdislike = nbdislike + 1 WHERE id = :id";
         $req = $this->db->prepare($str);
         $res = $req->execute(array(
-            'id'=>$publication->getId()
+            'id'=>$commentaire->getId()
         ));
 
         if($res) {

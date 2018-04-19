@@ -8,7 +8,7 @@
         $idUser = $_POST['idUser'];
         $commentaire = $_POST['commentaire'];
 
-        $com = new Commentaire(0,$idUser,$idPublication,date('d-m-Y'),0,0);
+        $com = new Commentaire(0,$idUser,$idPublication,$commentaire,date('d-m-Y'),0,0);
         $comdao = new CommentaireDAO();
 
         $result = $comdao -> ajouterCommentaire($com);

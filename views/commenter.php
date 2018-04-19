@@ -6,16 +6,27 @@ session_start();
  * Date: 05/04/2018
  * Time: 10:04 AM
  */
-include_once('../controllers/recupAll_publication.php');
+require_once ('../models/dao/connexiondb.class.php');
+require_once ('../models/structure/commentaire.class.php');
+require_once ('../models/dao/commentaire.dao.php');
+
+
 
 if (!isset($_SESSION['matricule'])){
     header('Location: login.php') ;
 }
-    if(isset($_GET['idPub']) && isset($_GET['contenu']) && isset($_GET['date']) && isset($_GET['nblike']) && isset($_GET['nbdislike'])){
-        $idPub = $_GET['idPub']; $contenu = $_GET['contenu']; $date = $_GET['date'];
-        $idPub = $_GET['nblike']; $contenu = $_GET['nbdislike'];
-    }
-//    var_dump($_GET['contenu']);die();
+//    if(isset($_GET['idPub']) && isset($_GET['contenu']) && isset($_GET['date']) && isset($_GET['nblike']) && isset($_GET['nbdislike'])){
+        $idPub = isset($_GET['idPub']) ? $_GET['idPub'] : "";
+        $contenu = isset($_GET['contenu']) ? $_GET['contenu'] : "";
+        $date = isset($_GET['date']) ? $_GET['date'] : "";
+        $nbLike = isset($_GET['nblike']) ? $_GET['nblike'] : "";
+        $nbDislike = isset($_GET['dislike']) ? $_GET['dislike'] : "";
+        $idUser = isset($_GET['idUser']) ? $_GET['idUser'] : "";
+//    }
+    $commentaire = new Commentaire(0,0,$idPub,0,0,0,0);
+    $commentairedao = new CommentaireDAO();
+    $res = $commentairedao->getAllCommentaires($commentaire);
+//var_dump($res);die();
 
 ?>
 <html>
@@ -46,23 +57,56 @@ if (!isset($_SESSION['matricule'])){
     <hr>
 </div>
 <div class="container">
-    <div class="col-md-12">
+    <div class="col-md-12 jumbotron">
             <div class="media">
                 <div class="media-body">
-                    <h5 class="media-heading"><?php echo $pub['id'];?></h5>
-                    <p><?php echo $pub['contenu'];?>
-                        <a href="commenter.php?idPub=<?php echo $pub['id'];?>&contenu=<?php echo $pub['contenu'];?>&date=<?php echo $pub['date'];?>&nblike=<?php echo $pub['nblike'];?>&dislike=<?php echo $pub['nbdislike'];?>">commenter</a></p>
+<!--                    <h5 class="media-heading">--><?php //echo $idPub;?><!--</h5>-->
+                    <p><?php echo $contenu;?></p>
                     <div class="col-xs-12"></div>
                     <div class="col-xs-4">
-                        <span class="right">Post&eacute; le <?php echo $pub['date'];?></span>
+                        <span class="right">Post&eacute; le <?php echo $date;?></span>
                     </div>
                     <div class="col-xs-8">
-                        <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $pub['id'];?>">Like</a>(<?php echo $pub['nblike'];?>)</span>
-                        <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $pub['id'];?>">Dislike</a>(<?php echo $pub['nbdislike'];?>)</span>
+                        <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $idPub;?>">Like</a>(<?php echo $nbLike;?>)</span>
+                        <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $idPub;?>">Dislike</a>(<?php echo $nbDislike;?>)</span>
                     </div>
                 </div>
             </div>
-            <hr>
+    </div>
+    <div class="col-md-8 offset-md-2">
+        <?php foreach ($res as $com){?>
+        <div class="media">
+            <div class="media-body">
+                <h5 class="media-heading"><?php echo $com['id'];?></h5>
+                <p><?php echo $com['contenu'];?></p>
+                <div class="col-xs-12"></div>
+                <div class="col-xs-4">
+                    <span class="right">Post&eacute; le <?php echo $com['date'];?></span>
+                </div>
+                <div class="col-xs-8">
+                    <span class="left"><a href="../controllers/add_like.php?idPub=<?php echo $com['id'];?>">Like</a>(<?php echo $com['nblike'];?>)</span>
+                    <span class="left"><a href="../controllers/add_dislike.php?idPub=<?php echo $com['id'];?>">Dislike</a>(<?php echo $com['nbdislike'];?>)</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <?php }?>
+    </div>
+    <div class="col-md-12">
+        <form action="../controllers/add_commentaire.php" method="post">
+            <br><br><br>
+            <!--Textarea with icon prefix-->
+            <div class="md-form">
+                <i class="fa fa-pencil prefix"></i>
+                <input type="hidden" name="idUser" value="<?php echo $_SESSION['id']?>">
+                <input type="hidden" name="idpublication" value="<?php echo $idPub?>">
+                <textarea type="text" id="form8" class="md-textarea" name="commentaire"></textarea>
+                <label for="form8">Votre Commentaire</label>
+            </div>
+            <div class="">
+                <button class="btn btn-success btn-lg">Commenter</button>
+            </div>
+        </form>
     </div>
 </div>
 <br>
