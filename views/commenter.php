@@ -6,12 +6,16 @@ session_start();
  * Date: 05/04/2018
  * Time: 10:04 AM
  */
-    include_once('../controllers/recupAll_publication.php');
+include_once('../controllers/recupAll_publication.php');
 
-    if (!isset($_SESSION['matricule'])){
-        header('Location: login.php') ;
+if (!isset($_SESSION['matricule'])){
+    header('Location: login.php') ;
+}
+    if(isset($_GET['idPub']) && isset($_GET['contenu']) && isset($_GET['date']) && isset($_GET['nblike']) && isset($_GET['nbdislike'])){
+        $idPub = $_GET['idPub']; $contenu = $_GET['contenu']; $date = $_GET['date'];
+        $idPub = $_GET['nblike']; $contenu = $_GET['nbdislike'];
     }
-//    var_dump($res);die();
+//    var_dump($_GET['contenu']);die();
 
 ?>
 <html>
@@ -19,7 +23,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <link rel="icon" href="static/img/esis.png">
+    <link rel="icon" href="static/img/esis.png">
     <title>ESIS-OJ</title>
 
     <!-- Font Awesome -->
@@ -38,20 +42,16 @@ session_start();
 <!--/.Navbar-->
 <!--Header-->
 <div class="text-xs-center">
-    <h3><i class="fa fa-star"></i> ALL</h3>
+    <h3><i class="fa fa-star"></i> Commentaires</h3>
     <hr>
 </div>
 <div class="container">
     <div class="col-md-12">
-        <?php foreach ($res as $pub){?>
             <div class="media">
-<!--                <a class="media-left waves-light">-->
-<!--                    <img class="rounded-circle" src="" alt="Publication image">-->
-<!--                </a>-->
                 <div class="media-body">
                     <h5 class="media-heading"><?php echo $pub['id'];?></h5>
                     <p><?php echo $pub['contenu'];?>
-                        <a href="../views/commenter.php?idUser= <?php echo $_SESSION['id']?>&idPub=<?php echo $pub['id'];?>&contenu=<?php echo $pub['contenu'];?>&date=<?php echo $pub['date'];?>&nblike=<?php echo $pub['nblike'];?>&dislike=<?php echo $pub['nbdislike'];?>">commenter</a></p>
+                        <a href="commenter.php?idPub=<?php echo $pub['id'];?>&contenu=<?php echo $pub['contenu'];?>&date=<?php echo $pub['date'];?>&nblike=<?php echo $pub['nblike'];?>&dislike=<?php echo $pub['nbdislike'];?>">commenter</a></p>
                     <div class="col-xs-12"></div>
                     <div class="col-xs-4">
                         <span class="right">Post&eacute; le <?php echo $pub['date'];?></span>
@@ -63,7 +63,6 @@ session_start();
                 </div>
             </div>
             <hr>
-        <?php }?>
     </div>
 </div>
 <br>
